@@ -22,6 +22,7 @@
 }
 
 /*                      정렬                    */
+/*             브레이크 포인트(include)            */
 /*                 back-drop 기본               */
 .back-drop {
   width: 100%;
@@ -225,4 +226,11 @@ body {
     margin: 0 20px;
   }
 }
+
+/* header */
+/* About */
+/* Skills */
+/* Portfolio */
+/* Contact */
+/* footer */
 /*# sourceMappingURL=style.css.map */

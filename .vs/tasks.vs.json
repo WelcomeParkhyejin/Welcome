@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Welcome",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-parkhye",
+      "appliesTo": "parkhye/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-parkhye",
+      "appliesTo": "parkhye/",
+      "type": "launch"
+    }
+  ]
+}

@@ -85,7 +85,36 @@ $point_blue : #353cdd;
 }
 
 
+//----------------------------------------------//
+/*             브레이크 포인트(include)            */
+//----------------------------------------------//
+$break_point_pc : 1199px;
+$break_point_tablet : 769px;
+$break_point_mobile : 499px;
+$break_point_xmobile : 321px;
 
+@mixin rwd($break_point) {
+    @if ( $break_point == tablet ) {
+        @media only screen and ( max-width: #{$break_point_tablet} ) {
+            @content;
+        }
+    }
+    @if ( $break_point == mobile ) {
+        @media only screen and ( max-width: #{$break_point_mobile} ) {
+            @content;
+        }
+    }
+    @if ( $break_point == pc ) {
+        @media only screen and ( min-width: #{$break_point_pc} ) {
+            @content;
+        }
+    }
+    @if ( $break_point == xmobile ) {
+        @media only screen and ( max-width: #{$break_point_xmobile} ) {
+            @content;
+        }
+    }
+}
 
 //----------------------------------------------//
 /*                 back-drop 기본               */
