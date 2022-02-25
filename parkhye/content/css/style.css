@@ -216,11 +216,9 @@ body {
 }
 
 @media only screen and (max-width: 769px) {
-  .container-fluid {
-    width: 100%;
-  }
   .container {
     max-width: 769px;
+    width: 100%;
   }
   .row {
     margin: 0 20px;
@@ -228,9 +226,323 @@ body {
 }
 
 /* header */
+.header-nav {
+  padding-top: 10px;
+}
+
+.header-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+@media only screen and (max-width: 769px) {
+  .header-nav ul {
+    display: none;
+  }
+}
+
+.header-nav ul li a {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 769px) {
+  .header-nav ul li a {
+    font-size: 16px;
+  }
+}
+
+.mobile-nav-btn {
+  background: transparent;
+  font-size: 24px;
+  color: #333;
+  display: none;
+}
+
+@media only screen and (max-width: 769px) {
+  .mobile-nav-btn {
+    display: block;
+  }
+}
+
+/* main */
+.main-section {
+  background: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+}
+
+@media only screen and (max-width: 769px) {
+  .section-title {
+    padding: 10px 0;
+  }
+}
+
+.section-title h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 769px) {
+  .section-title h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+}
+
+.section-title p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@media only screen and (max-width: 769px) {
+  .section-title p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.section-content {
+  padding: 50px 0;
+}
+
+@media only screen and (max-width: 769px) {
+  .section-content {
+    padding: 20px 0;
+  }
+}
+
 /* About */
+.about-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+@media only screen and (max-width: 769px) {
+  .about-wrap {
+    row-gap: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.about-wrap .about-card {
+  width: 32%;
+  height: 500px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background: #fff;
+  -webkit-box-shadow: 0 3px 6px #e5e5e567;
+          box-shadow: 0 3px 6px #e5e5e567;
+  position: relative;
+}
+
+@media only screen and (max-width: 769px) {
+  .about-wrap .about-card {
+    width: 100%;
+    height: 300px;
+    padding: 12px;
+  }
+}
+
+.about-wrap .about-card strong {
+  font-size: 30px;
+  line-height: 32px;
+  text-align: center;
+  display: block;
+  padding: 20px 0;
+  text-transform: uppercase;
+  color: #333;
+}
+
+@media only screen and (max-width: 769px) {
+  .about-wrap .about-card strong {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 0;
+  }
+}
+
+.about-wrap .about-card p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media only screen and (max-width: 769px) {
+  .about-wrap .about-card p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.about-wrap .about-card.experience ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+
+@media only screen and (max-width: 769px) {
+  .about-wrap .about-card.experience ul {
+    row-gap: 5px;
+  }
+}
+
+.about-wrap .about-card.experience ul li {
+  list-style: inside;
+  font-size: 18px;
+  line-height: 26px;
+  color: #efefef;
+}
+
+@media only screen and (max-width: 769px) {
+  .about-wrap .about-card.experience ul li {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.about-wrap .about-card.iam ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+@media only screen and (max-width: 769px) {
+  .about-wrap .about-card.iam ul {
+    row-gap: 10px;
+  }
+}
+
+.about-wrap .about-card.iam ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+
+@media only screen and (max-width: 769px) {
+  .about-wrap .about-card.iam ul li {
+    row-gap: 6px;
+  }
+}
+
+.about-wrap .about-card.iam ul li p {
+  color: #efefef;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 769px) {
+  .about-wrap .about-card.iam ul li p {
+    font-size: 18px;
+  }
+}
+
+.about-wrap .about-card.iam ul li span {
+  font-size: 16px;
+  line-height: 24px;
+  color: #efefef;
+}
+
+@media only screen and (max-width: 769px) {
+  .about-wrap .about-card.iam ul li span {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
 /* Skills */
 /* Portfolio */
 /* Contact */
 /* footer */
+.go-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #bbb;
+  border: 1px solid #bbb;
+}
+
+.footer {
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-wrap {
+  padding: 20px 0;
+}
+
+.footer-wrap p {
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #bbb;
+  font-weight: 200;
+}
 /*# sourceMappingURL=style.css.map */
