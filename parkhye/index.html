@@ -8,7 +8,7 @@
     <!-- 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&family=Noto+Sans+KR:wght@100;200;300;400;700;900&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="/assets/libs/swiper/swiper.min.css" />
     <link rel="stylesheet" href="/assets/libs/remixicon/remixicon.css" />
@@ -20,10 +20,10 @@
         <div class="container">
             <nav class="header-nav">
                 <ul>
-                    <li><a href="" title="나의 이야기">About</a></li>
-                    <li><a href="" title="스킬">Skills</a></li>
-                    <li><a href="" title="포트폴리오">Portfolio</a></li>
-                    <li><a href="" title="연락처">Contact</a></li>
+                    <li><a href="#About" title="About">About</a></li>
+                    <li><a href="#Skill" title="Skills">Skills</a></li>
+                    <li><a href="#Portfolio" title="Portfolio">Portfolio</a></li>
+                    <li><a href="#Contact" title="Contact">Contact</a></li>
                 </ul>
                 <button onclick="MobileNavClose(this);" type="button" class="mobile-nav-btn close"><i class="ri-close-line"></i></button>
             </nav>
@@ -45,13 +45,13 @@
         </section>
         <div class="container">
 
-            <section class="main-about">
+            <section id="About" class="section main-about">
                 <div class="row">
                     <div class="section-title">
                         <h2>About</h2>
                         <p>
                             안녕하세요,<br>
-                            <em>Html5와 css를 할 때 가장 행복한</em><br>
+                            예쁜 웹페이지를 만들때 가장 행복한<br>
                             1년차 경력 웹 퍼블리셔 박혜진입니다.<br><br/>
                             짧은 기간 동안이지만 많은 프로젝트에 참여하고<br>
                             많은 것을 배우고 느껴가면서<br>
@@ -63,21 +63,23 @@
                             <div class="about-card">
                                 <strong>Introduction</strong>
                                 <p>
+                                    1994년 3월 1일생<br><br/>
                                     퍼블리싱에 대한 행복을 더 찾아가기 위해<br>
                                     항상 더 찾아보고 발전하는 중입니다.<br>
-                                    최적화된 태그와 스크립트, 유지보수에 용이한 css를 할 때<br>
+                                    최적화된 태그와 스크립트,<br>
+                                    유지보수에 용이한 html과 css를 할 때<br>
                                     가장 행복을 느낍니다.
                                 </p>
                             </div>
                             <div class="about-card experience">
                                 <strong>Experiences and qualifications</strong>
                                 <ul>
-                                    <li>김포고등학교 졸업</li>
-                                    <li>인하대학교 의류디자인학과 졸업</li>
-                                    <li>컬러리스트 기사</li>
-                                    <li>GTQ 1급</li>
-                                    <li>ZARA Inditex.retail-korea에서 Floor VMD&Seller 1년 10개월 근무</li>
-                                    <li>Exmaru(이엑스마루) 웹 에이전시에서 퍼블리셔 1년 1개월 근무</li>
+                                    <li><i class="ri-donut-chart-line"></i>김포고등학교 졸업</li>
+                                    <li><i class="ri-donut-chart-line"></i>인하대학교 의류디자인학과 졸업</li>
+                                    <li><i class="ri-donut-chart-line"></i>컬러리스트 기사</li>
+                                    <li><i class="ri-donut-chart-line"></i>GTQ 1급</li>
+                                    <li><i class="ri-donut-chart-line"></i>ZARA retail-korea에서 Floor VMD&Seller 1년 10개월 근무</li>
+                                    <li><i class="ri-donut-chart-line"></i>Exmaru(이엑스마루) 웹 에이전시에서 퍼블리셔 1년 1개월 근무</li>
                                 </ul>
                             </div>
                             <div class="about-card iam">
@@ -102,23 +104,22 @@
                 </div>
             </section>
 
-            <section class="main-skill">
+            <section id="Skill" class="section main-skill">
                 <div class="row">
                     <div class="section-title">
                         <h2>Skills</h2>
-                        <p></p>
                     </div>
                     <div class="section-content">
                         <div class="skill-wrap">
                             <figure>
-                                <figcaption>HTML</figcaption>
+                                <figcaption>HTML<i class="ri-html5-line"></i></figcaption>
                                 <ul>
                                     <li>HTML5의 다양한 태그를 사용한 페이지 구성</li>
                                     <li>모바일 반응형 제작</li>
                                 </ul>
                             </figure>
                             <figure>
-                                <figcaption>css</figcaption>
+                                <figcaption>css<i class="ri-css3-line"></i></figcaption>
                                 <ul>
                                     <li>scss 문법 활용을 통한 css구성</li>
                                     <li>반응형을 고려한 레이아웃(+부트스트랩)</li>
@@ -127,14 +128,14 @@
                                 </ul>
                             </figure>
                             <figure>
-                                <figcaption>Javascript</figcaption>
+                                <figcaption>Javascript<i class="ri-braces-line"></i></figcaption>
                                 <ul>
                                     <li>jQuery 활용</li>
                                     <li>slider,animation등 여러 라이브러리 활용</li>
                                 </ul>
                             </figure>
                             <figure>
-                                <figcaption>Photoshop</figcaption>
+                                <figcaption>Photoshop<i class="ri-brush-line"></i></figcaption>
                                 <ul>
                                     <li>GTQ 1급</li>
                                     <li>화면 구성에 필요한 이미지 제작 가능</li>
@@ -145,18 +146,17 @@
                 </div>
             </section>
 
-            <section class="main-portfolio">
+            <section id="Portfolio" class="section main-portfolio">
                 <div class="row">
                     <div class="section-title">
                         <h2>Portfolio</h2>
-                        <p></p>
                     </div>
                     <div class="section-content">
                         <ul class="portfolio-tab">
-                            <li><button>자체 제작</button></li>
-                            <li><button>템플릿 기반</button></li>
+                            <li class="active"><button type="button">Self-made</button></li>
+                            <li><button type="button">Template-based</button></li>
                         </ul>
-                        <div id="tab-1" class="portfolio-wrap">
+                        <div id="tab-1" class="portfolio-wrap active">
                             <em>모든 퍼블리싱 참여도는 100%이며, 작업기간은 프로젝트의 스케일에 따라 다르나, 평균 2주입니다.</em>
                             <ul>
                                 <li>
@@ -169,20 +169,20 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://dev.aquaquest.co.kr/" title="" target="_blank">
-                                        <figure>
-                                            <img src="/content/img/s4l.png" alt="Aquaquest" />
-                                            <figcaption>Aquaquest</figcaption>
-                                            <span>수상안전 교육프로그램</span>
-                                        </figure>
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="http://lsk.lska.co.kr/Home/Index" title="" target="_blank">
                                         <figure>
                                             <img src="/content/img/lsa.png" alt="LSA" />
                                             <figcaption>LSA</figcaption>
                                             <span>수상안전 관련</span>
+                                        </figure>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://dev.aquaquest.co.kr/" title="" target="_blank">
+                                        <figure>
+                                            <img src="/content/img/s4l.png" alt="Aquaquest" />
+                                            <figcaption>Aquaquest</figcaption>
+                                            <span>수상안전 교육프로그램</span>
                                         </figure>
                                     </a>
                                 </li>
@@ -227,7 +227,7 @@
                                         <figure>
                                             <img src="/content/img/excelplace.png" alt="엑셀플레이스 모바일" />
                                             <figcaption>엑셀플레이스 모바일</figcaption>
-                                            <span>소고기 브랜드</span>
+                                            <span>소고기 유통 브랜드</span>
                                         </figure>
                                     </a>
                                 </li>
@@ -296,7 +296,7 @@
                 </div>
             </section>
 
-            <section class="main-contact">
+            <section id="Contact" class="section main-contact">
                 <div class="row">
                     <div class="section-title">
                         <h2>Contact</h2>
