@@ -1,22 +1,42 @@
 /* header */
 .header-nav{
-    padding-top: 10px;
+    padding-top: 20px;
+    @include rwd(tablet) {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 15;
+        width: 100%;
+        background: #fff;
+        &.active{
+            display: block;
+        }
+    }
     ul{
         display: flex;
         align-items: center;
         justify-content: flex-end;
         column-gap: 20px;
         @include rwd(tablet) {
-            display: none;
+            flex-direction: column;
+            row-gap: 20px;
+            padding: 25px 0;
+            border-bottom: 1px solid #000;
         }
         li{
             a{
+                @extend %en-font;
                 font-size: 24px;
                 text-transform: uppercase;
                 color: #333;
-                letter-spacing: 1px;
+                letter-spacing: 5px;
+                text-shadow: -1px 0 #4c4cf9, 0 2px #333, 2px 0 #333, 0 -1px #333;
+                &:hover{
+                    text-decoration: line-through;
+                }
                 @include rwd(tablet) {
-                    font-size: 16px;
+                    font-size: 18px;
                 }
             }
         }
@@ -28,29 +48,111 @@
     font-size: 24px;
     color: #333;
     display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
     @include rwd(tablet) {
         display: block;
     }
+    &.close{
+        font-size: 30px;
+    }
 }
-
-
-
-
-
-
-
-
 
 //section css start/////////////////////////////////////////////////////////////////////////////////////////
 
 /* main */
 .main-section{
-    background: url();
+    background: url(/content/img/main_banner.png);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    @include rwd(tablet) {
+        background: url(/content/img/main_banner_mo.png);
+    }
     .text-box{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 40px;
+        z-index: 10;
+        @include rwd(tablet) {
+            top: 25%;
+            left: 20px;
+        }
         h1{
-
+            @extend %en-font;
+            font-size: 100px;
+            line-height: 105px;
+            font-weight: 700;
+            color: #333;
+            @include rwd(tablet) {
+                font-size: 50px;
+                line-height: 60px;
+            }
+        }
+        p{
+            @extend %en-font;
+            font-size: 65px;
+            line-height: 80px;
+            color: #fff;
+            text-shadow: -1px 0 #4c4cf9, 0 2px #333, 2px 0 #333, 0 -1px #333;
+            @include rwd(tablet) {
+                font-size: 24px;
+                line-height: 36px;
+                text-shadow: -1px 0 #4c4cf9, 0 1px #333, 0 0 #333, 0 -1px #333;
+            }
+        }
+    }
+    .rotatebox{
+        position: absolute;
+        &.box1{
+            top: 30%;
+            left: 10px;
+            width: 300px;
+            height: 300px;
+            border: 3px solid #000;
+            animation: rotate 30s linear infinite;
+            @include rwd(tablet) {
+                width: 150px;
+                height: 150px;
+                top: 70%;
+                left: 0;
+            }
+        }
+        &.box2{
+            top: 10%;
+            right: 10px;
+            width: 60px;
+            height: 60px;
+            border: 2px solid #000;
+            animation: rotate2 15s linear infinite;
+            @include rwd(tablet) {
+                width: 40px;
+                height: 40px;
+                top: 15%;
+            }
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(45deg);
+            }
+        
+            100% {
+                transform: rotate(405deg);
+            }
+        }
+        @keyframes rotate2 {
+            0% {
+                transform: rotate(-20deg);
+            }
+        
+            100% {
+                transform: rotate(-300deg);
+            }
         }
     }
 }
@@ -214,7 +316,15 @@
 
 
 /* Portfolio */
-
+.portfolio-wrap{
+    ul{
+        li{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
 
 
 
@@ -239,8 +349,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #bbb;
-    border: 1px solid #bbb;
+    color: #000;
+    border: 1px solid #000;
+    background: #fff;
 }
 .footer{
     border-top: 1px solid #e5e5e5;

@@ -21,28 +21,17 @@
   margin-top: 100px;
 }
 
+/*                      폰트                    */
+.header-nav ul li a, .main-section .text-box h1, .main-section .text-box p {
+  font-family: 'Poppins', sans-serif;
+}
+
 /*                      정렬                    */
 /*             브레이크 포인트(include)            */
-/*                 back-drop 기본               */
-.back-drop {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-.back-drop.active {
-  display: block;
-}
-
 /* 초기화 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code, button
-del, dfn, em, img, ins, kbd, q, s, samp,
+a, abbr, acronym, address, big, cite, code, button del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -90,8 +79,7 @@ table {
   border-spacing: 0;
 }
 
-​
-button {
+​ button {
   outline: 0;
 }
 
@@ -227,7 +215,22 @@ body {
 
 /* header */
 .header-nav {
-  padding-top: 10px;
+  padding-top: 20px;
+}
+
+@media only screen and (max-width: 769px) {
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    background: #fff;
+  }
+  .header-nav.active {
+    display: block;
+  }
 }
 
 .header-nav ul {
@@ -246,7 +249,13 @@ body {
 
 @media only screen and (max-width: 769px) {
   .header-nav ul {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid #000;
   }
 }
 
@@ -254,12 +263,17 @@ body {
   font-size: 24px;
   text-transform: uppercase;
   color: #333;
-  letter-spacing: 1px;
+  letter-spacing: 5px;
+  text-shadow: -1px 0 #4c4cf9, 0 2px #333, 2px 0 #333, 0 -1px #333;
+}
+
+.header-nav ul li a:hover {
+  text-decoration: line-through;
 }
 
 @media only screen and (max-width: 769px) {
   .header-nav ul li a {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -268,6 +282,10 @@ body {
   font-size: 24px;
   color: #333;
   display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
 }
 
 @media only screen and (max-width: 769px) {
@@ -276,11 +294,154 @@ body {
   }
 }
 
+.mobile-nav-btn.close {
+  font-size: 30px;
+}
+
 /* main */
 .main-section {
-  background: url();
+  background: url(/content/img/main_banner.png);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 769px) {
+  .main-section {
+    background: url(/content/img/main_banner_mo.png);
+  }
+}
+
+.main-section .text-box {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 40px;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 769px) {
+  .main-section .text-box {
+    top: 25%;
+    left: 20px;
+  }
+}
+
+.main-section .text-box h1 {
+  font-size: 100px;
+  line-height: 105px;
+  font-weight: 700;
+  color: #333;
+}
+
+@media only screen and (max-width: 769px) {
+  .main-section .text-box h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+.main-section .text-box p {
+  font-size: 65px;
+  line-height: 80px;
+  color: #fff;
+  text-shadow: -1px 0 #4c4cf9, 0 2px #333, 2px 0 #333, 0 -1px #333;
+}
+
+@media only screen and (max-width: 769px) {
+  .main-section .text-box p {
+    font-size: 24px;
+    line-height: 36px;
+    text-shadow: -1px 0 #4c4cf9, 0 1px #333, 0 0 #333, 0 -1px #333;
+  }
+}
+
+.main-section .rotatebox {
+  position: absolute;
+}
+
+.main-section .rotatebox.box1 {
+  top: 30%;
+  left: 10px;
+  width: 300px;
+  height: 300px;
+  border: 3px solid #000;
+  -webkit-animation: rotate 30s linear infinite;
+          animation: rotate 30s linear infinite;
+}
+
+@media only screen and (max-width: 769px) {
+  .main-section .rotatebox.box1 {
+    width: 150px;
+    height: 150px;
+    top: 70%;
+    left: 0;
+  }
+}
+
+.main-section .rotatebox.box2 {
+  top: 10%;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #000;
+  -webkit-animation: rotate2 15s linear infinite;
+          animation: rotate2 15s linear infinite;
+}
+
+@media only screen and (max-width: 769px) {
+  .main-section .rotatebox.box2 {
+    width: 40px;
+    height: 40px;
+    top: 15%;
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+}
+
+@-webkit-keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: rotate(-300deg);
+            transform: rotate(-300deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: rotate(-300deg);
+            transform: rotate(-300deg);
+  }
 }
 
 .section-title {
@@ -507,6 +668,10 @@ body {
 
 /* Skills */
 /* Portfolio */
+.portfolio-wrap ul li img {
+  width: 100%;
+}
+
 /* Contact */
 /* footer */
 .go-top-btn {
@@ -526,8 +691,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #bbb;
-  border: 1px solid #bbb;
+  color: #000;
+  border: 1px solid #000;
+  background: #fff;
 }
 
 .footer {

@@ -5,9 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PARKHYEJIN</title>
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap" rel="stylesheet">
+    <!-- css -->
     <link rel="stylesheet" href="/assets/libs/swiper/swiper.min.css" />
     <link rel="stylesheet" href="/assets/libs/remixicon/remixicon.css" />
     <link rel="stylesheet" href="/content/css/style.css" />
+
 </head>
 <body>
     <header id="header" class="header container-fluid">
@@ -19,20 +25,25 @@
                     <li><a href="" title="포트폴리오">Portfolio</a></li>
                     <li><a href="" title="연락처">Contact</a></li>
                 </ul>
+                <button onclick="MobileNavClose(this);" type="button" class="mobile-nav-btn close"><i class="ri-close-line"></i></button>
             </nav>
-            <button type="button" class="mobile-nav-btn"><i class="ri-menu-3-line"></i></button>
+            <button onclick="MobileNavOpen(this);" type="button" class="mobile-nav-btn"><i class="ri-menu-3-line"></i></button>
         </div>
     </header>
     <main id="main" class="main container-fluid">
-        <div class="container">
-
-            <section class="main-section">
+        <section class="main-section">
+            <div class="container">
                 <div class="row">
                     <div class="text-box">
-                        <h1>안녕하세요,<br>웹 퍼블리셔 1년차 박혜진입니다.</h1>
+                        <h1>Welcome,</h1>
+                        <p>Web publisher Park Hyejin.</p>
                     </div>
+                    <div class="rotatebox box1"></div>
+                    <div class="rotatebox box2"></div>
                 </div>
-            </section>
+            </div>
+        </section>
+        <div class="container">
 
             <section class="main-about">
                 <div class="row">
@@ -149,81 +160,81 @@
                             <em>모든 퍼블리싱 참여도는 100%이며, 작업기간은 프로젝트의 스케일에 따라 다르나, 평균 2주입니다.</em>
                             <ul>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="http://lsa.lska.co.kr/" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="LSK(Lifesaving Society Korea)" />
+                                            <img src="/content/img/lsk.png" alt="LSK(Lifesaving Society Korea)" />
                                             <figcaption>LSK(Lifesaving Society Korea)</figcaption>
                                             <span>익사예방·응급처치 연구 및 교육 전문기관 소개</span>
                                         </figure>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="http://dev.aquaquest.co.kr/" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="Aquaquest" />
+                                            <img src="/content/img/s4l.png" alt="Aquaquest" />
                                             <figcaption>Aquaquest</figcaption>
                                             <span>수상안전 교육프로그램</span>
                                         </figure>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="http://lsk.lska.co.kr/Home/Index" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="LSA" />
+                                            <img src="/content/img/lsa.png" alt="LSA" />
                                             <figcaption>LSA</figcaption>
                                             <span>수상안전 관련</span>
                                         </figure>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="https://www.noah-noriter.com/" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="NORITER 모바일" />
+                                            <img src="/content/img/noriter.png" alt="NORITER 모바일" />
                                             <figcaption>NORITER 모바일</figcaption>
                                             <span>삼행시 짓기</span>
                                         </figure>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="http://www.cellbiodx.com/" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="Cellbio 셀바이오" />
+                                            <img src="/content/img/cellbio.png" alt="Cellbio 셀바이오" />
                                             <figcaption>Cellbio 셀바이오</figcaption>
                                             <span>동물병원 의료 기기</span>
                                         </figure>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="https://pushnews.io/" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="푸시뉴스" />
+                                            <img src="/content/img/pushnews.png" alt="푸시뉴스" />
                                             <figcaption>푸시뉴스</figcaption>
                                             <span>주식 관련 기사</span>
                                         </figure>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="https://black.pushnews.ai/index" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="푸시블랙 모바일" />
+                                            <img src="/content/img/pushblack.png" alt="푸시블랙 모바일" />
                                             <figcaption>푸시블랙 모바일</figcaption>
                                             <span>주식 관련 리포트 및 아카데미</span>
                                         </figure>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="http://m.excelplace.co.kr/" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="엑셀플레이스 모바일" />
+                                            <img src="/content/img/excelplace.png" alt="엑셀플레이스 모바일" />
                                             <figcaption>엑셀플레이스 모바일</figcaption>
                                             <span>소고기 브랜드</span>
                                         </figure>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="https://www.kpopenglish.com/" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="에이스에듀" />
+                                            <img src="/content/img/eduace.png" alt="에이스에듀" />
                                             <figcaption>에이스에듀</figcaption>
                                             <span>영어 뮤직비디오 인터넷 강의</span>
                                         </figure>
@@ -234,8 +245,8 @@
                         <div id="tab-2" class="portfolio-wrap">
                             <em>고객이 원하는 템플릿을 기반으로 퍼블리싱을 추가/수정하여 작업한 프로젝트입니다. 작업기간은 평균 2~7일 입니다.</em>
                             <ul>
-                                <li>
-                                    <a href="" title="">
+                                <!-- <li>
+                                    <a href="" title="" target="_blank">
                                         <figure>
                                             <img src="/content/img/" alt="오클레어" />
                                             <figcaption>오클레어</figcaption>
@@ -244,36 +255,36 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="" title="" target="_blank">
                                         <figure>
                                             <img src="/content/img/" alt="LittlzShop" />
                                             <figcaption>LittlzShop</figcaption>
                                             <span>유아동복 쇼핑몰</span>
                                         </figure>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li>
-                                    <a href="" title="">
+                                    <a href="http://emo.adsnsoft.net/" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="이모티브" />
+                                            <img src="/content/img/emo.png" alt="이모티브" />
                                             <figcaption>이모티브</figcaption>
                                             <span>가전 제품 맞춤 유통</span>
                                         </figure>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="http://itmgroup.co.kr/" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="ITM" />
+                                            <img src="/content/img/itm.png" alt="ITM" />
                                             <figcaption>ITM</figcaption>
                                             <span>딜러 솔루션 및 교육</span>
                                         </figure>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" title="">
+                                    <a href="http://biddingteam.com/" title="" target="_blank">
                                         <figure>
-                                            <img src="/content/img/" alt="ERA.BiddingTeam" />
+                                            <img src="/content/img/bidding.png" alt="ERA.BiddingTeam" />
                                             <figcaption>ERA.BiddingTeam</figcaption>
                                             <span>프라이빗 부동산 중개</span>
                                         </figure>
@@ -312,7 +323,7 @@
             </div>
         </div>
     </footer>
-    <button type="button" class="go-top-btn"><i class="ri-arrow-up-s-line"></i></button>
+    <button onclick="GotoTop();" type="button" class="go-top-btn"><i class="ri-arrow-up-s-line"></i></button>
 
     <script src="/assets/libs/jquery/jquery-1.12.4.min.js"></script>
     <script src="/assets/libs/swiper/swiper.min.js"></script>
