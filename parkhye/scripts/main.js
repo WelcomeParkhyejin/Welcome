@@ -17,13 +17,21 @@ $('.header-nav ul li a').on('click', function() {
 });
 //스크롤 시 헤더 active 생성
 let header = $('.header');
-
-    $(window).scroll(function(e){
-        if(header.offset().top !== 0){
-            if(!header.hasClass('active')){
-                header.addClass('active');
-            }
-        }else{
-            header.removeClass('active');
+$(window).scroll(function(e){
+    if(header.offset().top !== 0){
+        if(!header.hasClass('active')){
+            header.addClass('active');
         }
-    });
+    }else{
+        header.removeClass('active');
+    }
+});
+//포트폴리오 탭
+function PortfolioTab(tab) {
+    let tab_li = $(tab).parents('li');
+    let tab_id = tab_li.attr('data-tab');
+    $('.portfolio-tab li').removeClass('active');
+    $('.portfolio-wrap').removeClass('active');
+    tab_li.addClass('active');
+    $("#"+tab_id).addClass('active');
+};
