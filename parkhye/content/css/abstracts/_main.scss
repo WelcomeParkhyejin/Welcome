@@ -604,6 +604,12 @@
     color: #000;
     border: 1px solid #000;
     background: #fff;
+    @include rwd(tablet) {
+        width: 35px;
+        height: 35px;
+        font-size: 22px;
+        border-radius: 0;
+    }
 }
 .footer{
     border-top: 1px solid #e5e5e5;
